@@ -14,14 +14,17 @@
                                    'gist)
   "Libraries that should be installed by default.")
 
-(defun starter-kit-elpa-install ()
-  "Install all starter-kit packages that aren't installed."
+(defun elpa-install (packages)
+    "Install all starter-kit packages that aren't installed."
   (interactive)
-  (dolist (package starter-kit-packages)
+  (dolist (package packages)
     (unless (or (member package package-activated-list)
                 (functionp package))
       (message "Installing %s" (symbol-name package))
       (package-install package))))
+
+(defun starter-kit-elpa-install ()
+  (elpa-install starter-kit-packages))
 
 (defun esk-online? ()
   "See if we're online.
