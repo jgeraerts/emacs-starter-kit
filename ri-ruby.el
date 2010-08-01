@@ -479,3 +479,6 @@ printf
              (goto-char 1)
              (ri-mode)))
          info)))
+
+
+(provide 'ri-ruby)

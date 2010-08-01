@@ -73,4 +73,8 @@
 (if (file-exists-p user-specific-dir)
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
+;;; modifications by jgeraert
+(require 'starter-kit-custom)
+
+
 ;;; init.el ends here
