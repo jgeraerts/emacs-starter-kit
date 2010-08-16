@@ -35,4 +35,9 @@
 
 (global-set-key (kbd "S-SPC") 'complete-symbol)
 
+;; orgmode
+(setq load-path (cons "~\\.emacs.d\\vendor\\org-7.01g\\lisp" load-path))
+(require 'org-install)
+
 (provide 'starter-kit-custom)
+
