@@ -39,5 +39,7 @@
 (setq load-path (cons "~\\.emacs.d\\vendor\\org-7.01g\\lisp" load-path))
 (require 'org-install)
 
+;; graphviz mode
+(load-file "~/.emacs.d/elpa-to-submit/graphviz-dot-mode.el")
 (provide 'starter-kit-custom)
 
